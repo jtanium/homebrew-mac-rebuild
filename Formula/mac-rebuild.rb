@@ -1,16 +1,21 @@
 class MacRebuild < Formula
   desc "Intelligent Mac development environment backup and restore tool"
   homepage "https://github.com/jtanium/mac-rebuild"
-  url "https://github.com/jtanium/mac-rebuild/archive/v1.0.0.tar.gz"
-  sha256 "201c71c1a8a182ce66bf66766c2010ae5ce3cc3a70df3c4d703bd9cdbc41d9b1"
+  url "https://github.com/jtanium/mac-rebuild/archive/refs/heads/main.tar.gz"
+  version "1.0.4"
+  sha256 "382cc487583875d4b7edcd966dc55d9f94e5866bdddafb2617c9b14072467c69"
   license "MIT"
 
   depends_on "git"
 
   def install
     bin.install "mac-rebuild"
-    prefix.install "lib"
-    man1.install "man/mac-rebuild.1"
+
+    # Install library files in libexec structure (proper Homebrew way)
+    (libexec/"lib/mac-rebuild").install Dir["lib/mac-rebuild/*"]
+
+    # Install man page
+    man1.install "man/mac-rebuild.1" if File.exist?("man/mac-rebuild.1")
   end
 
   def caveats
