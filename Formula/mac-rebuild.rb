@@ -1,9 +1,9 @@
 class MacRebuild < Formula
   desc "Intelligent Mac development environment backup and restore tool with modular plugin system"
   homepage "https://github.com/jtanium/mac-rebuild"
-  url "https://github.com/jtanium/mac-rebuild/archive/v2.2.1.tar.gz"
-  version "2.2.1"
-  sha256 "2942d8f4870fb07debcd6a576a41ad8b20baf3a3e2ca8d0f1b6e73f6aca8feba"
+  url "https://github.com/jtanium/mac-rebuild/archive/v2.2.2.tar.gz"
+  version "2.2.2"
+  sha256 "30674a8aad15f9287981560645668bb16a51280ad06acc3045d27dc1f46bcfee"
   license "MIT"
 
   depends_on "git"
@@ -51,7 +51,7 @@ class MacRebuild < Formula
         2. mac-rebuild restore <your-backup-path>
         3. All apps, SSH keys, and settings restored!
 
-      New in v2.2.1:
+      New in v2.2.2:
         • Minor bug fixes and performance improvements
     EOS
   end
