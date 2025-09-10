@@ -1,9 +1,9 @@
 class MacRebuild < Formula
   desc "Intelligent Mac development environment backup and restore tool with modular plugin system"
   homepage "https://github.com/jtanium/mac-rebuild"
-  url "https://github.com/jtanium/mac-rebuild/archive/v2.1.0.tar.gz"
-  version "2.1.0"
-  sha256 "0b743c1124637beb061ec1bac041ff8535c0492bf17b5ee2764fcec45d27a744"
+  url "https://github.com/jtanium/mac-rebuild/archive/v2.2.0.tar.gz"
+  version "2.2.0"
+  sha256 "edba55817ea71ce55cb1d65445ee542544a13aeacee487ad2a0deaf5b44f1469"
   license "MIT"
 
   depends_on "git"
@@ -51,10 +51,10 @@ class MacRebuild < Formula
         2. mac-rebuild restore <your-backup-path>
         3. All apps, SSH keys, and settings restored!
 
-      New in v2.1.0:
-        • Oh My Zsh plugin for complete framework backup/restore
-        • Enhanced purge command with multi-location scanning
-        • Fixed iCloud Drive backup path issue
+      New in v2.2.0:
+        • Improved performance for large backups
+        • Fixed permission issues on restored files
+        • Enhanced error handling and reporting
     EOS
   end
 
